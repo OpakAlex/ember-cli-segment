@@ -10,11 +10,11 @@ function initialize(registry, application) {
 }
 
 function instanceInitialize(container) {
-  var config = container.lookupFactory('config:environment');
+  //var config = container.lookupFactory('config:environment');
   var router = container.lookup('router:main');
   var segment = container.lookup('service:segment');
 
-  segment.set('config', config);
+  //segment.set('config', config);
 
   router.on('didTransition', function() {
     segment.trackPageView();
